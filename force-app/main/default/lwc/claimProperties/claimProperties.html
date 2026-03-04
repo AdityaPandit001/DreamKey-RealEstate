@@ -1,0 +1,42 @@
+<template>
+
+    <lightning-card title="Properties" icon-name="standard:address" size="large">
+        <lightning-layout>
+          <h2>  <lightning-layout-item  class="slds-m-around_medium">
+                <li> Only a agent can claim property. After claiming the property it  will be assigned to that specific agent and closed for others</li>
+                <li>Claim this propertery button will the claim the property you have opened</li>
+                <li>Claim Open Properties button will give you options of other open property you can claim in bulk</li>
+            </lightning-layout-item></h2>
+
+         
+        </lightning-layout>
+        
+        <lightning-layout>
+            <h1><lightning-layout-item  class="slds-m-vertical_medium">
+                <lightning-icon icon-name="action:close" size="xx-small" variant="warning"></lightning-icon>
+                You cannot claim property which do not belong to your sales office, To claim that you have to join the sales office of that property 
+            </lightning-layout-item></h1>
+          </lightning-layout>
+
+        <lightning-layout>
+
+            <lightning-layout-item class="slds-m-around_medium">
+                <lightning-button onclick={handleClick} aria-haspopup="dialog" label="Claim Open Properties" variant="brand">
+                </lightning-button>
+            </lightning-layout-item>
+            
+            <lightning-layout-item class="slds-m-around_medium">
+                <lightning-button onclick={handleSingleClaim} label="Claim this propertery" variant="brand">
+                </lightning-button>
+            </lightning-layout-item>
+
+           
+    
+        </lightning-layout>
+
+    </lightning-card>
+
+   
+   
+
+</template>

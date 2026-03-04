@@ -1,0 +1,57 @@
+<template>
+
+<lightning-card title="Pending Properties" variant="narrow" i   icon-name="action:approval" size="large"
+alternative-text="Indicates approval">
+   
+      <h2>  <lightning-layout>
+            <lightning-layout-item  class="slds-m-around_small">
+                <li>All the property which status is Approval pending it will shown in Approve commission button</li>
+                <li>Approve button will make the property status close approved after that it will bw sold</li>
+                <li>Reject buttom will open the property status and remove to assigned agent</li>
+            </lightning-layout-item>
+        </lightning-layout></h2>
+
+<h1>      <lightning-layout>
+
+            <lightning-layout-item  class="slds-m-around_small">
+            <li>    Sales Office Name : {officeName.data}</li>
+            <li>  Year to date Sales : Rs. {OfficeYearToDateSales.data}</li>
+              </lightning-layout-item>
+        </lightning-layout></h1>  
+        
+  
+
+
+    <lightning-layout horizontal-align="end" multiple-rows="true">
+        <lightning-layout-item>
+            <lightning-button label="Approve Commissions" class="slds-m-horizontal_medium" onclick={handleApprove}
+                                variant="brand"></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button label="Reject Commissions" class="slds-m-horizontal_medium" onclick={handleReject}
+                                variant="destructive"></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button label="Refresh" class="slds-m-horizontal_medium" onclick={handleClose}
+                                variant="neutral"></lightning-button>
+        </lightning-layout-item>
+        
+    </lightning-layout>
+    
+</lightning-card>
+    <lightning-layout horizontal-align="space">
+        <lightning-layout-item class="slds-m-horizontal_medium">
+            <lightning-datatable
+                key-field="Id"
+                data={properties}
+                columns={columns}
+                onrowselection={getSelectedRows}
+                onsave={handleSave}
+                draft-values={draftValues}
+                >
+            </lightning-datatable>
+        </lightning-layout-item>
+    </lightning-layout>
+
+
+</template>

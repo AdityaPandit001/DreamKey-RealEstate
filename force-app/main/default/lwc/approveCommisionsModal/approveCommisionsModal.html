@@ -1,0 +1,40 @@
+<template>
+
+    <lightning-modal-header label="Approve Commissions- Nagpur Region">
+    </lightning-modal-header>
+    
+    <lightning-modal-body>
+      
+
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item>
+                <lightning-button label="Approve Commissions" class="slds-m-horizontal_medium" onclick={handleApprove}
+                                    variant="brand"></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button label="Reject Commissions" class="slds-m-horizontal_medium" onclick={handleReject}
+                                    variant="destructive"></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button label="Close" class="slds-m-horizontal_medium" onclick={handleClose}
+                                    variant="neutral"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout horizontal-align="space">
+            <lightning-layout-item class="slds-m-around_medium">
+                <lightning-datatable
+                    key-field="id"
+                    data={properties}
+                    columns={columns}
+                    onrowselection={getSelectedRows}
+                    >
+                </lightning-datatable>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="Exit" onclick={handleOkay}></lightning-button>
+    </lightning-modal-footer>
+</template>

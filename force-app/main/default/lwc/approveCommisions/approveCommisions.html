@@ -1,0 +1,33 @@
+<template>
+    eweewww
+    <lightning-card title="Approval requests" icon-name="standard:address" size="large">
+       <lightning-layout>
+        <h2>   <lightning-layout-item  class="slds-m-around_medium">
+                <li>All the property which status is Approval pending it will shown in Approve commission button</li>
+                <li>Approve button will make the property status close approved after that it will bw sold</li>
+                <li>Reject buttom will open the property status and remove to assigned agent</li>
+            </lightning-layout-item></h2>
+
+            <h1><lightning-layout-item  class="slds-m-around_medium">
+                <li>You cannot claim property which do not belong to your sales office, To claim that you have to join the sales office of that property </li>
+            </lightning-layout-item></h1>
+        </lightning-layout>
+
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item>
+                <lightning-button onclick={handleClick}  label="Approve Commisions" variant="brand">>
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button label="Clone" class="slds-m-horizontal_medium" variant="neutral"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+       
+    </lightning-card>
+
+   
+
+    
+    
+</template>
